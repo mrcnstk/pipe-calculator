@@ -8,21 +8,37 @@
     <title>Pipe Calculator</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="js/main.js"></script>
 </head>
 
 <body>
     <div id="container">
         <p>Rury do ucięcia</p>
-        <form id="cut1">
-            Rura:<input type="text" name="pipe1" value="219,1x6,3">
-            Długość:<input type="text" name="length1" value="6000">
-            Ilość:<input type="text" name="quantity1" value="3">
-        </form>
+        <div id="cutting">
+            <form id="cut1">
+                Rura:<input type="text" name="cpipe1" value="219,1x6,3">
+                Długość:<input type="text" name="clength1" value="6000">
+                Ilość:<input type="text" name="cquantity1" value="3">
+            </form>
+        </div>
         <button id="addNextCut" class="myButton">+</button>
+        <button id="deleteLastCut" class="myButton">-</button>
         <hr>
 
         <p>Magazyn</p>
-
+        <div id="storage">
+            <form id="storage1">
+                Rura:<input type="text" name="spipe1" value="219,1x6,3">
+                Długość:<input type="text" name="slength1" value="6000">
+                Ilość:<input type="text" name="squantity1" value="3">
+            </form>
+        </div>
+        <button id="addNextStorage" class="myButton">+</button>
+        <button id="deleteLastStorage" class="myButton">-</button>
+        <br>
+        <div style="text-align:center">
+            <button id="oblicz" class="myButton">OBLICZ</button>
+        </div>
     </div>
 </body>
 
