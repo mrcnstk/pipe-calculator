@@ -29,10 +29,14 @@ function addCuttingField(amountOfCuttingFields) {
 }
 
 function removeCuttingField(amountOfCuttingFields) {
-    let form = document.getElementById("cut" + amountOfCuttingFields);
-    if (amountOfCuttingFields <= 1) return;
-    form.parentNode.removeChild(form);
-    return --amountOfCuttingFields;
+    if (amountOfCuttingFields <= 1) {
+        return;
+    } else {
+        let form = document.getElementById("cut" + amountOfCuttingFields);
+        form.parentNode.removeChild(form);
+        return --amountOfCuttingFields;
+    }
+
 }
 
 function addStorageField(amountOfStorageFields) {
@@ -68,6 +72,12 @@ function removeStorageField(amountOfStorageFields) {
     form.parentNode.removeChild(form);
     return --amountOfStorageFields;
 }
+function openSideWindow() {
+    document.getElementById("cuttingList").style.width = "100%";
+}
+function closeSideWindow() {
+    document.getElementById("cuttingList").style.width = "0";
+}
 
 window.onload = function () {
 
@@ -75,6 +85,8 @@ window.onload = function () {
     let cDeleteButton = document.getElementById("deleteLastCut");
     let sAddButton = document.getElementById("addNextStorage");
     let sDeleteButton = document.getElementById("deleteLastStorage");
+    let calculateButton = document.getElementById("calculate");
+    let closingCross = document.getElementById("closingCross");
     let cutAmount = 1;
     let storageAmount = 1;
 
@@ -91,5 +103,11 @@ window.onload = function () {
     });
     sDeleteButton.addEventListener("click", function () {
         storageAmount = removeStorageField(storageAmount);
+    });
+    calculateButton.addEventListener("click", function () {
+        openSideWindow();
+    });
+    closingCross.addEventListener("click", function () {
+        closeSideWindow();
     });
 };

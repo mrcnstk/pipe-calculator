@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pipe Calculator</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="js/main.js"></script>
 </head>
@@ -21,8 +23,10 @@
                 Ilość:<input type="text" name="cquantity1" value="3">
             </form>
         </div>
-        <button id="addNextCut" class="myButton">+</button>
-        <button id="deleteLastCut" class="myButton">-</button>
+        <div style="text-align:center">
+            <button id="addNextCut" class="myButton">+</button>
+            <button id="deleteLastCut" class="myButton">-</button>
+        </div>
         <hr>
 
         <p>Magazyn</p>
@@ -33,11 +37,17 @@
                 Ilość:<input type="text" name="squantity1" value="3">
             </form>
         </div>
-        <button id="addNextStorage" class="myButton">+</button>
-        <button id="deleteLastStorage" class="myButton">-</button>
+        <div style="text-align:center">
+            <button id="addNextStorage" class="myButton">+</button>
+            <button id="deleteLastStorage" class="myButton">-</button>
+        </div>
         <br>
         <div style="text-align:center">
-            <button id="oblicz" class="myButton">OBLICZ</button>
+            <button id="calculate" class="myButton">OBLICZ</button>
+        </div>
+        <div id="cuttingList">
+            <a href="#" id="closingCross"><i class="fas fa-times"></i></a>
+            <p>Lista cięć</p>
         </div>
     </div>
 </body>
