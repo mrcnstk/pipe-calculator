@@ -79,6 +79,23 @@ function closeSideWindow() {
     document.getElementById("cuttingList").style.width = "0";
 }
 
+//-----------------------------------------------------------
+/*
+function cutForm(pipe, length, quantity) {
+    
+}
+
+function getDataFromFields(amountOfCuttingFields, amountOfStorageFields) {
+
+
+
+
+    for (let i = 1; i <= amountOfCuttingFields; i++) {
+
+    }
+}
+*/ //IN PROGRESS
+
 window.onload = function () {
 
     let cAddButton = document.getElementById("addNextCut");
@@ -106,6 +123,7 @@ window.onload = function () {
     });
     calculateButton.addEventListener("click", function () {
         openSideWindow();
+        getDataFromFields(cutAmount, storageAmount);
     });
     closingCross.addEventListener("click", function () {
         closeSideWindow();
